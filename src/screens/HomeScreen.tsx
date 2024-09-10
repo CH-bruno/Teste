@@ -1,27 +1,26 @@
-// src/screens/HomeScreen.tsx
 import React from 'react';
-import { View, Text, Image, StyleSheet, Button } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { useTheme, Button as PaperButton } from 'react-native-paper';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
+import Header from '../components/Header';
 
 interface HomeScreenProps {
   navigation: StackNavigationProp<RootStackParamList, 'Início'>;
-  toggleTheme: () => void;
 }
 
-const HomeScreen: React.FC<HomeScreenProps> = ({ navigation, toggleTheme }) => {
+const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   const { colors } = useTheme();
-  const textColor = colors.onBackground || 'black'; // Use a cor padrão se a cor do texto não estiver definida
+  const textColor = colors.onBackground || 'black';
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <Image source={require('../assets/images/favicon.png')} style={styles.image} />
-      <Text style={{ color: textColor }}>Bem-vindo ao Início!</Text>
-      <View style={styles.spacing} />
-      <PaperButton icon="theme-light-dark" mode="contained" onPress={toggleTheme}>
-        Alterar Tema
-      </PaperButton>
+      <Image
+        source={require('../assets/images/favicon.png')}
+        style={styles.image}
+        resizeMode="contain" // Atualizado para usar props.resizeMode
+      />
+      <Text style={[styles.text, { color: textColor }]}>Bem-vindo ao Início!</Text>
       <View style={styles.spacing} />
       <PaperButton
         icon="chevron-right"
@@ -47,6 +46,9 @@ const styles = StyleSheet.create({
   },
   spacing: {
     height: 20, // Ajuste este valor para aumentar ou diminuir o espaço entre os botões
+  },
+  text: {
+    // Adicione estilos adicionais se necessário
   },
 });
 

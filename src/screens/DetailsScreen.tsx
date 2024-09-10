@@ -1,4 +1,3 @@
-// src/screens/DetailsScreen.tsx
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTheme, Button as PaperButton } from 'react-native-paper';

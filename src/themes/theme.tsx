@@ -4,13 +4,16 @@ export const lightTheme = {
   ...MD3LightTheme,
   colors: {
     ...MD3LightTheme.colors,
-    primary: '#00BFFF', // Azul claro
-    secondary: '#FFD700', // Amarelo
-    background: '#FFFFFF', // Cor de fundo clara
-    card: '#FFFFFF', // Cor do cartão (definido como fundo claro para o tema claro)
-    text: '#000000', // Cor do texto (preto para contraste no fundo claro)
+    primary: '#ADD8E6', // Azul bem claro
+    background: '#FFFFFF', // Cor de fundo
+    card: '#E0F7FA', // Cor do card
+    text: '#000000', // Cor do texto
     border: '#CCCCCC', // Cor da borda
-    notification: '#FF0000', // Cor de notificação (vermelho para contraste)
+    notification: '#FF0000', // Cor da notificação
+  },
+  // Adicione a configuração para a barra inferior
+  barStyle: {
+    backgroundColor: '#E0F7FA', // Cor da barra inferior para o tema claro
   },
 };
 
@@ -18,12 +21,15 @@ export const darkTheme = {
   ...MD3DarkTheme,
   colors: {
     ...MD3DarkTheme.colors,
-    primary: '#00BFFF', // Azul claro
-    secondary: '#FFD700', // Amarelo
-    background: '#000000', // Cor de fundo escura
-    card: '#333333', // Cor do cartão (um tom escuro para o tema escuro)
-    text: '#FFFFFF', // Cor do texto (branco para contraste no fundo escuro)
+    primary: '#000000', // Preto no tema escuro
+    background: '#121212', // Cor de fundo
+    card: '#121212', // Cor do card
+    text: '#FFFFFF', // Cor do texto
     border: '#444444', // Cor da borda
-    notification: '#FF0000', // Cor de notificação (vermelho para contraste)
+    notification: '#FF0000', // Cor da notificação
+  },
+  // Adicione a configuração para a barra inferior
+  barStyle: {
+    backgroundColor: '#121212', // Cor da barra inferior para o tema escuro
   },
 };
